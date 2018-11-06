@@ -1,1 +1,320 @@
-/* You can add global styles to this file, and also import other style files */
+$font-body: 'Catamaran', cursive;
+$font-title: 'Open Sans Condensed', cursive;
+
+@keyframes pulse{
+  0%{
+    box-shadow: 0 0 0 0.05rem rgba($color: #fff, $alpha: .3);
+  }
+
+  100%{
+    box-shadow: 0 0 0 0.15rem rgba($color: #fff, $alpha: .5);
+  }
+}
+
+@keyframes opaque{
+  0%{
+    opacity: 0;
+  }
+
+  100%{
+    opacity: 1;
+  }
+}
+
+#fp-nav ul li a span, .fp-slidesNav ul li a span{
+  background: #e5b2ca !important;
+}
+
+html {
+  height: 100%;
+  background-image: linear-gradient(-35deg, #434343 0, #000 100%);
+
+  padding: 0;
+  margin: 0;
+  font-size: 24px;
+  font-family: $font-body;
+
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 400;
+    text-shadow: 0 0 0.2rem rgba($color: #000000, $alpha: 0.3);
+    font-family: $font-title;
+    margin: 0 !important;
+    text-transform: uppercase;
+  }
+
+  h1 {
+    letter-spacing: 0.4rem;
+  }
+
+  h2 {
+    letter-spacing: 0.3rem;
+  }
+
+  h6 {
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+  }
+}
+
+.icons-menu {
+  position: fixed;
+  left: 1rem;
+  top: 1rem;
+  padding: 0.5rem 0;
+  z-index: 100;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s;
+  background: rgba($color: #fff, $alpha: 0.1) linear-gradient(35deg, #6f27b0 0%, #e5b2ca 100%);
+
+  &.bottom {
+    top: unset;
+    bottom: 1rem;
+    padding: 0;
+    margin: 0;
+    background: transparent;
+
+    > a > img {
+      //margin: 0 0.5rem;
+    }
+  }
+
+  > a {
+    font-size: 0;
+    text-decoration: none;
+
+    > img {
+      max-width: 1rem;
+      margin: 0.35rem 0.5rem;
+    }
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.woggle {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  position: absolute;
+  top: unset;
+  bottom: 1rem;
+  right: 1rem;
+  font-size: 0.5rem;
+  text-transform: uppercase;
+  border-bottom: 1px dotted transparent;
+
+  &:hover {
+    border-bottom: 1px dotted #eee;
+  }
+}
+
+#fullpage {
+  > .section {
+    text-align: center;
+    color: #fff;
+    padding: 0 4rem;
+    box-sizing: border-box;
+
+    // about
+    &.about {
+      background-image: linear-gradient(-35deg, #434343 0%, black 100%);
+
+      .profile-pic {
+        margin-bottom: 1rem;
+        position: relative;
+        display: inline-block;
+        border: 0.4rem solid transparent;
+        border-radius: 100%;
+        animation: pulse 2s ease-out infinite alternate;
+        max-width: 150px;
+
+        img {
+          width: 100%;
+          transition: all 0.3s;
+          border-radius: 100%;
+          z-index: 1;
+          position: relative;
+          animation: opaque 2s infinite alternate;
+          vertical-align: bottom;
+
+          &.reveal {
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 2;
+            opacity: 0;
+            animation: opaque 2s ease-out infinite alternate-reverse;
+          }
+        }
+      }
+
+      .desc {
+        font-size: 0.5rem;
+        max-width: 700px;
+        text-align: center;
+        margin: 1rem auto 0;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+
+        > a {
+          color: #fff !important;
+          text-decoration: none !important;
+          border-bottom: 1px dotted #fff;
+        }
+      }
+    }
+
+    // skills
+    &.skills {
+      background-image: linear-gradient(35deg, black 0%, #434343 100%);
+
+      h2 {
+        margin-bottom: 1rem !important;
+      }
+
+      .uls {
+        display: flex;
+        flex-wrap: wrap;
+        text-align: left;
+
+        > ul {
+          padding: 0.5rem 1rem;
+          margin: 0;
+          list-style-type: none;
+          flex: 1 0 25%;
+          max-width: 100%;
+          box-sizing: border-box;
+
+          > li {
+            font-size: 0.5rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            line-height: 1rem;
+
+            &.title {
+              font-size: 0.75rem;
+              margin-bottom: 0.25rem;
+              font-family: $font-title;
+              color: #ccc;
+            }
+          }
+        }
+      }
+    }
+
+    // open source projects
+    &.projects {
+      background-image: linear-gradient(-35deg, #434343 0%, black 100%);
+
+      a.icon-link {
+        font-size: 0;
+        text-decoration: none;
+
+        img {
+          width: 200px;
+        }
+      }
+
+      h2 {
+        margin-bottom: 0.5rem !important;
+      }
+
+      .repos {
+        display: flex;
+        flex-wrap: wrap;
+
+        > .repo {
+          display: block;
+          text-decoration: none;
+          flex: 1 0 300px;
+          max-width: 100%;
+          color: #000;
+          margin: 0.5rem;
+          border-radius: 0.175rem;
+          text-align: left;
+          overflow: hidden;
+
+          div {
+            line-height: 1;
+          }
+
+          > .name {
+            font-size: 0.8rem;
+            padding: 0.75rem 1rem 0.125rem;
+            font-family: $font-title;
+            text-transform: uppercase;
+            letter-spacing: 0.075rem;
+            font-weight: 700;
+            color: #ad5c51;
+            background: rgba(255, 255, 255, 1);
+          }
+
+          > .desc {
+            font-size: 0.56rem;
+            line-height: 1.3;
+            padding: 0.25rem 1rem 0.75rem;
+            text-transform: uppercase;
+            background: rgba(255, 255, 255, 1);
+          }
+
+          > .counts {
+            font-family: $font-title;
+            text-transform: uppercase;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            padding: 0.5rem 1rem 0.5rem;
+            color: #fff;
+            background: #ad5c51;
+            box-shadow: inset 0 -2px 2px -2px rgba(0, 0, 0, 0.3);
+
+            > div {
+              margin-right: 0.5rem;
+              font-size: 0.5rem;
+            }
+          }
+
+          &:hover {
+            > .counts {
+              background: #607d8b;
+            }
+          }
+        }
+      }
+    }
+
+    // recent blog
+    &.recent-blog {
+      background-image: linear-gradient(35deg, black 0%, #434343 100%);
+
+      a.icon-link {
+        font-size: 0;
+        text-decoration: none;
+
+        img {
+          width: 200px;
+          margin-bottom: 1rem;
+        }
+      }
+
+      h2 {
+        margin-bottom: 0.5rem !important;
+      }
+
+      a {
+        display: block;
+        text-decoration: none;
+        color: #fff;
+
+        > h5:hover {
+          color: #00FD8D;
+        }
+      }
+    }
+  }
+}
