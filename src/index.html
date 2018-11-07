@@ -3,9 +3,9 @@
 
 <head>
   <meta charset="utf-8">
+
   <title>Alexander Saaavedra</title>
   <base href="/">
-
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   //- assets
@@ -31,14 +31,14 @@
               'Ionic Cordova and Flutter',
               'Node.js (es5/es6/es7)',
               'PHP and Python',
-              'MySQL, SQLite, PostgreSQL and MongoDB',
+              'MySQL, SQLite and MongoDB',
               'CSS, SASS and Typescript',
               'Gulp and Webpack',
               'Progressive web apps',
               'Express (REST), Mongoose and Sequelize',
               'Firebase and AWS',
               'Arduino / IoT',
-              'Adobe PS, LR, PR, AI and AE'
+              'Adobe PS, LR, PR and AE'
             ],
             breakLines: false,
             loopDelay: 2000,
@@ -69,37 +69,30 @@
     </a>
   </div>
   <div class="icons-menu bottom">
-    <a href="https://github.com/mralexsaavedra/personalweb" target="_blank">
+    <a onclick="changeLanguage()">
       <img src="assets/img/html-coding.svg" alt="personalweb">
     </a>
     <a href="mailto:mralexsaavedra@gmail.com">
       <img src="assets/img/gmail.svg" alt="gmail">
     </a>
   </div>
-  <div id="fullpage" class="fullpage-wrapper" style="height: 100%; position: relative; touch-action: none; transform: translate3d(0px, 0px, 0px); transition: all 700ms ease-in-out 0s;">
-    <div class="section about fp-section fp-table active fp-completely" style="height: 723px;">
-      <div class="fp-tableCell" style="height:723px;">
+  <div id="fullpage" class="fullpage-wrapper">
+    <div class="section about fp-section fp-table active fp-completely">
+      <div class="fp-tableCell">
         <div class="profile-pic">
           <img src="assets/img/profile-pic.png" alt="">
           <img class="reveal" src="assets/img/profile-pic-reveal.png" alt="">
         </div>
         <h1>Alexander Saavedra</h1>
         <h6 id="typeit" data-typeitid="2hopp5fj1w4xqrbfacqck">
-          <span style="display:inline;position:relative;font:inherit;color:inherit;" class="ti-container"></span>
-          <span style="display:inline;position:relative;font:inherit;color:inherit;" class="ti-cursor">|</span></h6>
-        <div class="desc">I have always been fascinated by technology. After graduating from Informatics Engineering, I
-          took an unusual step of stepping into unusual world of programming.Since then, I have acquired good taste in
-          areas like front - end development, back - end development, database management, UI / UX design, open source
-          and
-          tech
-          blogging.I 'm available for work - if you would like to build something together, <a href="mailto:mralexsaavedra@gmail.com">get
-            in touch</a>.
-        </div>
+          <span class="ti-container"></span>
+          <span class="ti-cursor">|</span></h6>
+        <div class="desc" id="description"></div>
       </div>
     </div>
-    <div class="section skills fp-section fp-table" style="height: 723px;">
-      <div class="fp-tableCell" style="height:723px;">
-        <h2>I am good at</h2>
+    <div class="section skills fp-section fp-table">
+      <div class="fp-tableCell">
+        <h2 id="knowledge"></h2>
         <div class="uls">
           <ul>
             <li class="title">front-end</li>
@@ -109,8 +102,7 @@
             <li>HTML5</li>
             <li>CSS / SASS</li>
             <li>JavaScript / ES6 / ES7</li>
-            <li>Semantic UI / Clarity</li>
-            <li>Angular Material</li>
+            <li>Material Design</li>
             <li>Progressive Web Apps</li>
             <li>Web Sockets</li>
           </ul>
@@ -120,7 +112,7 @@
             <li>Typescript</li>
             <li>PHP</li>
             <li>Python</li>
-            <li>MySQL+SQLite+PostgreSQL</li>
+            <li>MySQL+SQLite</li>
             <li>MongoDb / Mongoose</li>
             <li>Rest API (Express)</li>
           </ul>
@@ -134,7 +126,7 @@
             <li>Amazon AWS / Lamba</li>
           </ul>
           <ul>
-            <li class="title">others</li>
+            <li class="title" id="others"></li>
             <li>Ionic Cordova</li>
             <li>Flutter</li>
             <li>Arduino</li>
@@ -147,45 +139,85 @@
         </div>
       </div>
     </div>
-    <div class="section projects fp-section fp-table" style="height: 723px;">
-      <div class="fp-tableCell" style="height:723px;">
-        <a class="icon-link" href="https://github.com/mralexsaavedra?tab=repositories" target="_blank">
+    <div class="section projects fp-section fp-table">
+      <div class="fp-tableCell">
+        <a class="icon-link" href="https://github.com/thatisuday?tab=repositories" target="_blank">
           <img src="assets/img/github-color.svg" alt="">
         </a>
         <a class="icon-link" href="https://gitlab.com/dashboard/projects" target="_blank">
           <img src="assets/img/gitlab-logo.png" alt="">
         </a>
-        <h2>Open Source Work</h2>
-        <div class="desc">Estudié la carrera de Ingeniería Informática de Gestión y Sistemas de Información
-        </div>
+        <h2>Worktime</h2>
+        <div class="desc" id="worktime"></div>
       </div>
     </div>
-    <div class="section recent-blog fp-section fp-table" style="height: 723px;">
-      <div class="fp-tableCell" style="height:723px;">
-        <a class="icon-link" href="https://medium.com/@thatisuday/latest" target="_blank">
+    <div class="section recent-blog fp-section fp-table">
+      <div class="fp-tableCell">
+        <a class="icon-link" href="https://medium.com/@mralexsaavedra/latest" target="_blank">
           <img src="assets/img/medium-color.svg" alt="">
         </a>
-        <h2>Read my recent post</h2>
-        <!--<a target="_blank"
-         href="https://medium.com/@thatisuday/indexeddb-your-second-step-towards-progressive-web-apps-pwa-dcbcd6cc2076">
-        <h5 class="title">IndexedDB! Your second step towards Progressive Web Apps (PWA)</h5>
-      </a>
-      <a target="_blank"
-         href="https://itnext.io/service-workers-your-first-step-towards-progressive-web-apps-pwa-e4e11d1a2e85">
-        <h5 class="title">Service Workers! Your first step towards Progressive Web Apps (PWA)</h5>
-      </a>
-      <a target="_blank"
-         href="https://medium.com/@thatisuday/achieving-parallelism-in-javascript-using-web-workers-8f921f2d26db">
-        <h5 class="title">Achieving multi-threading (parallel programming) in JavaScript using Web Workers</h5>
-      </a>
-      <a target="_blank"
-         href="https://itnext.io/making-cli-app-with-ease-using-commander-js-and-inquirer-js-f3bbd52977ac">
-        <h5 class="title">Making CLI app with ease using commander.js and Inquirer.js</h5>
-      </a>-->
+        <h2 id="post"></h2>
+        <a target="_blank" href="https://medium.com/@mralexsaavedra/back-to-school-with-flutter-be6c4767dcdf">
+          <h5 class="title">Back to school... With Flutter</h5>
+        </a>
       </div>
     </div>
   </div>
   <a class="woggle" href="https://github.com/mralexsaavedra/mralexsaavedra.github.io" target="_blank">Made with 💛</a>
+
+  <script>
+    var language = 'en';
+
+    var i18n = {
+      'en': {
+        'description': 'I have always been fascinated by technology. After graduating from Informatic Engineering, I took an unusual step of stepping into unusual world of programming.Since then, I have acquired good taste in areas like front - end development, back - end development, database management, UI / UX design, open source and tech blogging. I \'m available for work - if you would like to build something together, <a href="mailto:mralexsaavedra@gmail.com">get in touch</a>.',
+        'knowledge': 'I am good at',
+        'others': 'others',
+        'worktime': 'I studied the Degree in Computer Engineering of Management and Information Systems at the School of Engineering of Bilbao, located in San Mamés. For seven months I was in a company where I began my work as web developer. I spent a lot of time doing a good End of Degree Project, and decided to present an IoT platform for the recording of meteorological data and its visualization through a mobile application. <a href="https://drive.google.com/open?id=1MXWn36Tib94ooCQVWLLs9YEg3aOyYOhv" target="_blank"> Here you will find more information about my EDP. </a> After I finish my life as a university student, I found a job as Full Stack Developer where I spent a whole year. In addition, in that period I developed a simple mobile application with Flutter technology. After that year, I decided to change job and location to another company, but with the same job, which is where I am today. Not only do I consider programming to be my work, but I also consider it my hobbi since I love discovering new technologies, doing MOOCS, sharing my projects on both GitHub and GitLab, tweeting about interesting things..',
+        'post': 'Read my recent post'
+      },
+      'es': {
+        'description': 'Siempre me ha fascinado la tecnología. Después de graduarme en Ingeniería Informática, di un paso importante para adentrarme en el inusual mundo de la programación. Desde entonces, he adquirido buenos conocimientos en áreas como desarrollo de aplicaciones front - ent y back - end, gestión de bases de datos, diseño de UI / UX, código abierto. y los blogs de tecnología. Estoy disponible para trabajar. Si desea construir algo juntos, <a href="mailto:mralexsaavedra@gmail.com">póngase en contacto</a>.',
+        'knowledge': 'Conocimientos',
+        'others': 'otros',
+        'worktime': 'Estudié el Grado de Ingeniería Informática de Gestión y Sistemas de Información en la Escuela de Ingeniería de Bilbao, ubicada en San Mamés. Durante siete meses estuve de prácticas en una empresa donde comenzó mi trabajo cómo desarrollador web. Dediqué mucho tiempo a hacer un buen Trabajo de Fin de Grado, y decidí presentar una plataforma IoT para el registro de datos meterorológicos y su visualización mediante una aplicación móvil. <a href="https://drive.google.com/open?id=1MXWn36Tib94ooCQVWLLs9YEg3aOyYOhv" target="_blank">Aquí podrás encontrar más información sobre mi TFG.</a> Después de que acabará mi vida como estudiante universitario, encontré un trabajo cómo desarrollador Full Stack en dónde pasé un año entero. Además, en ese periodo desarrollé una aplicación móvil sencilla con la tecnología Flutter. Después de ese año, decidí cambiar de trabajo y de ubicación a otra empresa pero con el mismo puesto de trabajo, que es en donde me encuentro a día de hoy. No sólo considero que la programación sea mi trabajo, sino que también la considero de hobbi ya que me encanta descubrir nuevas tecnologias, hacer MOOCS, compartir mis proyectos tanto en GitHub cómo en GitLab, twittear sobre cosas interesantes, etc.',
+        'post': 'Lee mis últimos post'
+      }
+    };
+
+    $(document).ready(function () {
+      setLanguage();
+    });
+
+    function changeLanguage() {
+      if (language === 'en') {
+        language = 'es';
+      } else {
+        language = 'en';
+      }
+      $(document).ready(function () {
+        $("body").animate({
+          opacity: '0',
+        }, "slow");
+      });
+      setTimeout(() => {
+        setLanguage();
+      }, 700);
+    }
+
+    function setLanguage() {
+      $(document).ready(function () {
+        $('#description')[0].innerHTML = i18n[language].description;
+        $('#knowledge')[0].innerText = i18n[language].knowledge;
+        $('#others')[0].innerText = i18n[language].others;
+        $('#worktime')[0].innerHTML = i18n[language].worktime;
+        $('#post')[0].innerText = i18n[language].post;
+        $("body").animate({
+          opacity: '1',
+        }, "slow");
+      });
+    }
+  </script>
 </body>
 
 </html>

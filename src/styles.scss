@@ -21,6 +21,18 @@ $font-title: 'Open Sans Condensed', cursive;
   }
 }
 
+@mixin tablet() {
+  @media screen and (max-width: 1024px) {
+      @content;
+  }
+}
+
+@mixin mobile() {
+  @media screen and (max-width: 600px) {
+      @content;
+  }
+}
+
 #fp-nav ul li a span, .fp-slidesNav ul li a span{
   background: #e5b2ca !important;
 }
@@ -54,6 +66,14 @@ html {
     letter-spacing: 0.1rem;
     font-weight: 600;
   }
+
+  @include tablet() {
+    font-size: 20px;
+  }
+
+  @include mobile {
+    font-size: 17px;
+  }
 }
 
 .icons-menu {
@@ -76,13 +96,14 @@ html {
     background: transparent;
 
     > a > img {
-      //margin: 0 0.5rem;
+      margin: 0 0.5rem;
     }
   }
 
   > a {
     font-size: 0;
     text-decoration: none;
+    cursor: pointer;
 
     > img {
       max-width: 1rem;
@@ -132,6 +153,11 @@ html {
         animation: pulse 2s ease-out infinite alternate;
         max-width: 150px;
 
+        @include mobile {
+          border: 0.4rem solid transparent;
+          max-width: 100px;
+        }
+
         img {
           width: 100%;
           transition: all 0.3s;
@@ -166,6 +192,11 @@ html {
           border-bottom: 1px dotted #fff;
         }
       }
+
+      .active {
+        background-color: white;
+        transition-duration: 0.2ms;
+      }
     }
 
     // skills
@@ -189,12 +220,20 @@ html {
           max-width: 100%;
           box-sizing: border-box;
 
+          @include mobile {
+            max-width: 50%;
+          }
+
           > li {
             font-size: 0.5rem;
             font-weight: 600;
             letter-spacing: 1px;
             text-transform: uppercase;
             line-height: 1rem;
+
+            @include mobile {
+              font-size: 0.45rem;
+            }
 
             &.title {
               font-size: 0.75rem;
@@ -203,6 +242,18 @@ html {
               color: #ccc;
             }
           }
+        }
+      }
+
+      @media screen and (max-width: 425px) {
+        h2 {
+          margin-bottom: 0rem !important;
+        }
+      }
+
+      @media screen and (max-width: 320px) {
+        li {
+          font-size: 0.4em !important;
         }
       }
     }
@@ -217,11 +268,55 @@ html {
 
         img {
           width: 200px;
+
+          @include mobile {
+            width: 100px;
+          }
+        }
+
+        @media screen and (max-width: 375px) {
+          img {
+            width: 80px;
+          }
         }
       }
 
       h2 {
         margin-bottom: 0.5rem !important;
+
+        @include mobile {
+          font-size: 18px;
+        }
+      }
+
+      .desc {
+        font-size: 0.5rem;
+        max-width: 700px;
+        text-align: center;
+        margin: 1rem auto 0;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+
+        > a {
+          color: #fff !important;
+          text-decoration: none !important;
+          border-bottom: 1px dotted #fff;
+        }
+
+        @include mobile {
+          font-size: 0.45rem;
+        }
+      }
+
+      @media screen and (max-width: 320px) {
+        h2 {
+          margin-bottom: 0rem !important;
+          font-size: 14px;
+        }
+
+        .desc {
+          font-size: 0.4rem;
+        }
       }
 
       .repos {
