@@ -1,222 +1,281 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
 
-<head>
-  <meta charset="utf-8">
+    <title>Alexander Saaavedra</title>
+    <base href="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Alexander Saaavedra</title>
-  <base href="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link href="https://fonts.googleapis.com/css?family=Catamaran:100,300,400,500,700,900|Open+Sans+Condensed:300,400,700"
-    rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/jquery.fullpage.min.css">
-  <script src="assets/js/jquery.min.js"></script>
-  <script src="assets/js/jquery.fullpage.min.js"></script>
-  <script src="assets/js/typeit.min.js"></script>
-  <script>
-    // fullPage.js pugin
-    $(document).ready(function () {
-      $('#fullpage').fullpage({
-        navigation: true,
-        easingcss3: 'ease-in-out',
-        afterRender: function () {
-          // typeit plugin
-          var instance = new TypeIt('#typeit', {
-            strings: [
-              'Full Stack Web Developer',
-              'Angular 4+, Polymer and Vue.js',
-              'Ionic Cordova and Flutter',
-              'Node.js (es5/es6/es7)',
-              'PHP and Python',
-              'MySQL, SQLite and MongoDB',
-              'CSS, SASS and Typescript',
-              'Gulp and Webpack',
-              'Progressive web apps',
-              'Express (REST), Mongoose and Sequelize',
-              'Firebase and AWS',
-              'Arduino / IoT',
-              'Adobe PS, LR, PR and AE'
-            ],
-            breakLines: false,
-            loopDelay: 2000,
-            loop: true
-          });
-        }
-      });
-    });
-  </script>
-<link rel="stylesheet" href="styles.5fa3f57c6c8d79e44fcf.css"></head>
-
-<body>
-  <div class="icons-menu">
-    <a href="https://github.com/mralexsaavedra" target="_blank">
-      <img src="assets/img/github-2.svg" alt="github">
-    </a>
-    <a href="https://gitlab.com/mralexsaavedra" target="_blank">
-      <img src="assets/img/gitlab.svg" alt="gitlab">
-    </a>
-    <a href="https://medium.com/@mralexsaavedra" target="_blank">
-      <img src="assets/img/medium.svg" alt="medium">
-    </a>
-    <a href="https://www.linkedin.com/in/mralexsaavedra/" target="_blank">
-      <img src="assets/img/linkedin.svg" alt="linkedin">
-    </a>
-    <a href="https://twitter.com/mralexsaavedra" target="_blank">
-      <img src="assets/img/twitter.svg" alt="twitter">
-    </a>
-  </div>
-  <div class="icons-menu bottom">
-    <a onclick="changeLanguage()">
-      <img src="assets/img/html-coding.svg" alt="personalweb">
-    </a>
-    <a href="mailto:mralexsaavedra@gmail.com">
-      <img src="assets/img/gmail.svg" alt="gmail">
-    </a>
-  </div>
-  <div id="fullpage" class="fullpage-wrapper">
-    <div class="section about fp-section fp-table active fp-completely">
-      <div class="fp-tableCell">
-        <div class="profile-pic">
-          <img src="assets/img/profile-pic.png" alt="">
-          <img class="reveal" src="assets/img/profile-pic-reveal.png" alt="">
-        </div>
-        <h1>Alexander Saavedra</h1>
-        <h6 id="typeit" data-typeitid="2hopp5fj1w4xqrbfacqck">
-          <span class="ti-container"></span>
-          <span class="ti-cursor">|</span></h6>
-        <div class="desc" id="description"></div>
-      </div>
-    </div>
-    <div class="section skills fp-section fp-table">
-      <div class="fp-tableCell">
-        <h2 id="knowledge"></h2>
-        <div class="uls">
-          <ul>
-            <li class="title">front-end</li>
-            <li>Angular 4+</li>
-            <li>Polymer</li>
-            <li>Vue.js</li>
-            <li>HTML5</li>
-            <li>CSS / SASS</li>
-            <li>JavaScript / ES6 / ES7</li>
-            <li>Material Design</li>
-            <li>Progressive Web Apps</li>
-            <li>Web Sockets</li>
-          </ul>
-          <ul>
-            <li class="title">back-end</li>
-            <li>Node.js</li>
-            <li>Typescript</li>
-            <li>PHP</li>
-            <li>Python</li>
-            <li>MySQL+SQLite</li>
-            <li>MongoDb / Mongoose</li>
-            <li>Rest API (Express)</li>
-          </ul>
-          <ul>
-            <li class="title">dev-ops</li>
-            <li>Git / GitHub / GitLab</li>
-            <li>Gulp</li>
-            <li>Webpack</li>
-            <li>Google Cloud</li>
-            <li>Firebase</li>
-            <li>Amazon AWS / Lamba</li>
-          </ul>
-          <ul>
-            <li class="title" id="others"></li>
-            <li>Ionic Cordova</li>
-            <li>Flutter</li>
-            <li>Arduino</li>
-            <li>IoT</li>
-            <li>Adobe Photoshop</li>
-            <li>Adobe Lightroom</li>
-            <li>After Effects</li>
-            <li>Premiere Pro</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="section projects fp-section fp-table">
-      <div class="fp-tableCell">
-        <a class="icon-link" href="https://github.com/thatisuday?tab=repositories" target="_blank">
-          <img src="assets/img/github-color.svg" alt="">
-        </a>
-        <a class="icon-link" href="https://gitlab.com/dashboard/projects" target="_blank">
-          <img src="assets/img/gitlab-logo.png" alt="">
-        </a>
-        <h2>Worktime</h2>
-        <div class="desc" id="worktime"></div>
-      </div>
-    </div>
-    <div class="section recent-blog fp-section fp-table">
-      <div class="fp-tableCell">
-        <a class="icon-link" href="https://medium.com/@mralexsaavedra/latest" target="_blank">
-          <img src="assets/img/medium-color.svg" alt="">
-        </a>
-        <h2 id="post"></h2>
-        <a target="_blank" href="https://medium.com/@mralexsaavedra/back-to-school-with-flutter-be6c4767dcdf">
-          <h5 class="title">Back to school... With Flutter</h5>
-        </a>
-      </div>
-    </div>
-  </div>
-  <a class="woggle" href="https://github.com/mralexsaavedra/mralexsaavedra.github.io" target="_blank">Made with 💛</a>
-
-  <script>
-    var language = 'en';
-
-    var i18n = {
-      'en': {
-        'description': 'I have always been fascinated by technology. After graduating from Informatic Engineering, I took an unusual step of stepping into unusual world of programming.Since then, I have acquired good taste in areas like front - end development, back - end development, database management, UI / UX design, open source and tech blogging. I \'m available for work - if you would like to build something together, <a href="mailto:mralexsaavedra@gmail.com">get in touch</a>.',
-        'knowledge': 'I am good at',
-        'others': 'others',
-        'worktime': 'I studied the Degree in Computer Engineering of Management and Information Systems at the School of Engineering of Bilbao, located in San Mamés. For seven months I was in a company where I began my work as web developer. I spent a lot of time doing a good End of Degree Project, and decided to present an IoT platform for the recording of meteorological data and its visualization through a mobile application. <a href="https://drive.google.com/open?id=1MXWn36Tib94ooCQVWLLs9YEg3aOyYOhv" target="_blank"> Here you will find more information about my EDP. </a> After I finish my life as a university student, I found a job as Full Stack Developer where I spent a whole year. In addition, in that period I developed a simple mobile application with Flutter technology. After that year, I decided to change job and location to another company, but with the same job, which is where I am today. Not only do I consider programming to be my work, but I also consider it my hobbi since I love discovering new technologies, doing MOOCS, sharing my projects on both GitHub and GitLab, tweeting about interesting things..',
-        'post': 'Read my recent post'
-      },
-      'es': {
-        'description': 'Siempre me ha fascinado la tecnología. Después de graduarme en Ingeniería Informática, di un paso importante para adentrarme en el inusual mundo de la programación. Desde entonces, he adquirido buenos conocimientos en áreas como desarrollo de aplicaciones front - ent y back - end, gestión de bases de datos, diseño de UI / UX, código abierto. y los blogs de tecnología. Estoy disponible para trabajar. Si desea construir algo juntos, <a href="mailto:mralexsaavedra@gmail.com">póngase en contacto</a>.',
-        'knowledge': 'Conocimientos',
-        'others': 'otros',
-        'worktime': 'Estudié el Grado de Ingeniería Informática de Gestión y Sistemas de Información en la Escuela de Ingeniería de Bilbao, ubicada en San Mamés. Durante siete meses estuve de prácticas en una empresa donde comenzó mi trabajo cómo desarrollador web. Dediqué mucho tiempo a hacer un buen Trabajo de Fin de Grado, y decidí presentar una plataforma IoT para el registro de datos meterorológicos y su visualización mediante una aplicación móvil. <a href="https://drive.google.com/open?id=1MXWn36Tib94ooCQVWLLs9YEg3aOyYOhv" target="_blank">Aquí podrás encontrar más información sobre mi TFG.</a> Después de que acabará mi vida como estudiante universitario, encontré un trabajo cómo desarrollador Full Stack en dónde pasé un año entero. Además, en ese periodo desarrollé una aplicación móvil sencilla con la tecnología Flutter. Después de ese año, decidí cambiar de trabajo y de ubicación a otra empresa pero con el mismo puesto de trabajo, que es en donde me encuentro a día de hoy. No sólo considero que la programación sea mi trabajo, sino que también la considero de hobbi ya que me encanta descubrir nuevas tecnologias, hacer MOOCS, compartir mis proyectos tanto en GitHub cómo en GitLab, twittear sobre cosas interesantes, etc.',
-        'post': 'Lee mis últimos post'
-      }
-    };
-
-    $(document).ready(function () {
-      setLanguage();
-    });
-
-    function changeLanguage() {
-      if (language === 'en') {
-        language = 'es';
-      } else {
-        language = 'en';
-      }
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Catamaran:100,300,400,500,700,900|Open+Sans+Condensed:300,400,700"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/jquery.fullpage.min.css" />
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.fullpage.min.js"></script>
+    <script src="assets/js/typeit.min.js"></script>
+    <script>
+      // fullPage.js pugin
       $(document).ready(function () {
-        $("body").animate({
-          opacity: '0',
-        }, "slow");
+        $('#fullpage').fullpage({
+          navigation: true,
+          easingcss3: 'ease-in-out',
+          afterRender: function () {
+            // typeit plugin
+            var instance = new TypeIt('#typeit', {
+              strings: [
+                'Full Stack Web Developer',
+                'Vue.js, Angular 10+ and Polymer',
+                'Ionic Cordova and Flutter',
+                'Firebase',
+                'Node.js (es5/es6/es7)',
+                'Express (REST), Mongoose and Sequelize',
+                'MongoDB, MySQL and SQLite',
+                'HTML5, CSS3, SASS and Typescript',
+                'Gulp and Webpack',
+                'Progressive web apps',
+                'Google Cloud Platform (GPC) and IBM Cloud',
+                'Arduino / IoT',
+                'GitHub and GitLab',
+                'Docker and Kubernetes',
+                'Adobe PS, LR, PR and AE',
+              ],
+              breakLines: false,
+              loopDelay: 2000,
+              loop: true,
+            });
+          },
+        });
       });
-      setTimeout(() => {
+    </script>
+    <link rel="stylesheet" href="styles.5fa3f57c6c8d79e44fcf.css" />
+  </head>
+
+  <body>
+    <div class="icons-menu">
+      <a href="https://github.com/mralexsaavedra" target="_blank">
+        <img src="assets/img/github-2.svg" alt="github" />
+      </a>
+      <a href="https://gitlab.com/mralexsaavedra" target="_blank">
+        <img src="assets/img/gitlab.svg" alt="gitlab" />
+      </a>
+      <!--       <a href="https://medium.com/@mralexsaavedra" target="_blank">
+        <img src="assets/img/medium.svg" alt="medium" />
+      </a> -->
+      <a href="https://www.linkedin.com/in/mralexsaavedra/" target="_blank">
+        <img src="assets/img/linkedin.svg" alt="linkedin" />
+      </a>
+      <!--       <a href="https://twitter.com/mralexsaavedra" target="_blank">
+        <img src="assets/img/twitter.svg" alt="twitter" />
+      </a> -->
+    </div>
+    <div class="icons-menu bottom">
+      <a onclick="changeLanguage()">
+        <img src="assets/img/html-coding.svg" alt="personalweb" />
+      </a>
+      <a href="mailto:mralexsaavedra@gmail.com">
+        <img src="assets/img/gmail.svg" alt="gmail" />
+      </a>
+    </div>
+    <div id="fullpage" class="fullpage-wrapper">
+      <div class="section about fp-section fp-table active fp-completely">
+        <div class="fp-tableCell">
+          <div class="profile-pic">
+            <img src="assets/img/profile-pic.png" alt="" />
+            <img
+              class="reveal"
+              src="assets/img/profile-pic-reveal.png"
+              alt=""
+            />
+          </div>
+          <h1>Alexander Saavedra</h1>
+          <h6 id="typeit" data-typeitid="2hopp5fj1w4xqrbfacqck">
+            <span class="ti-container"></span>
+            <span class="ti-cursor">|</span>
+          </h6>
+          <div class="desc" id="description"></div>
+        </div>
+      </div>
+      <div class="section skills fp-section fp-table">
+        <div class="fp-tableCell">
+          <h2 id="knowledge"></h2>
+          <div class="uls">
+            <ul>
+              <li class="title">front-end</li>
+              <li>Vue.js</li>
+              <li>Angular 10+</li>
+              <li>Polymer</li>
+              <li>HTML5</li>
+              <li>CSS / SASS</li>
+              <li>JavaScript / ES6 / ES7</li>
+              <li>Typescript</li>
+              <li>Progressive Web Apps</li>
+              <li>Web Sockets</li>
+            </ul>
+            <ul>
+              <li class="title">back-end</li>
+              <li>Node.js</li>
+              <li>PostgreSQL+MySQL</li>
+              <li>MongoDb / Mongoose</li>
+              <li>Rest API (Express)</li>
+              <li>Docker and Kubernetes</li>
+            </ul>
+            <ul>
+              <li class="title">dev-ops</li>
+              <li>Git / GitHub / GitLab</li>
+              <li>Gulp</li>
+              <li>Webpack</li>
+              <li>Google Cloud</li>
+              <li>Firebase</li>
+              <li>IBM Cloud</li>
+            </ul>
+            <ul>
+              <li class="title" id="others"></li>
+              <li>Ionic Cordova</li>
+              <li>Flutter</li>
+              <li>Arduino</li>
+              <li>IoT</li>
+              <li>Adobe Photoshop</li>
+              <li>Adobe Lightroom</li>
+              <li>After Effects</li>
+              <li>Premiere Pro</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="section projects fp-section fp-table">
+        <div class="fp-tableCell">
+          <a
+            class="icon-link"
+            href="https://github.com/thatisuday?tab=repositories"
+            target="_blank"
+          >
+            <img src="assets/img/github-color.svg" alt="" />
+          </a>
+          <a
+            class="icon-link"
+            href="https://gitlab.com/dashboard/projects"
+            target="_blank"
+          >
+            <img src="assets/img/gitlab-logo.png" alt="" />
+          </a>
+          <h2>Worktime</h2>
+          <div class="desc" id="worktime"></div>
+        </div>
+      </div>
+      <!--       <div class="section recent-blog fp-section fp-table">
+        <div class="fp-tableCell">
+          <a
+            class="icon-link"
+            href="https://medium.com/@mralexsaavedra/latest"
+            target="_blank"
+          >
+            <img src="assets/img/medium-color.svg" alt="" />
+          </a>
+          <h2 id="post"></h2>
+          <a
+            target="_blank"
+            href="https://medium.com/@mralexsaavedra/back-to-school-with-flutter-be6c4767dcdf"
+          >
+            <h5 class="title">Back to school... With Flutter</h5>
+          </a>
+        </div>
+      </div> -->
+    </div>
+    <a
+      class="woggle"
+      href="https://github.com/mralexsaavedra/mralexsaavedra.github.io"
+      target="_blank"
+      >Made with 💛</a
+    >
+
+    <script>
+      var language = 'en';
+
+      var i18n = {
+        en: {
+          description:
+            'I have always been fascinated by technology. After graduating from Informatic Engineering, I took an unusual step of stepping into unusual world of programming.Since then, I have acquired good taste in areas like front - end development, back - end development, database management, UI / UX design, open source and tech blogging. I \'m available for work - if you would like to build something together, <a href="mailto:mralexsaavedra@gmail.com">get in touch</a>.',
+          knowledge: 'I am good at',
+          others: 'others',
+          worktime:
+            'I studied the Degree in Computer Engineering of Management and Information Systems at the School of Engineering of Bilbao, located in San Mamés. For seven months I was in a company where I began my work as web developer. I spent a lot of time doing a good End of Degree Project, and decided to present an IoT platform for the recording of meteorological data and its visualization through a mobile application. After I finish my life as a university student, I found a job as Full Stack Developer where I spent a whole year. In addition, in that period I developed a simple mobile application with Flutter technology. After that year, I decided to change job and location to another company, and advance a little more in my professional career. Not only do I consider programming to be my work, but I also consider it my hobbi since I love discovering new technologies, doing MOOCS, sharing my projects on both GitHub and GitLab, tweeting about interesting things..',
+          post: 'Read my recent post',
+        },
+        es: {
+          description:
+            'Siempre me ha fascinado la tecnología. Después de graduarme en Ingeniería Informática, di un paso importante para adentrarme en el inusual mundo de la programación. Desde entonces, he adquirido buenos conocimientos en áreas como desarrollo de aplicaciones front - ent y back - end, gestión de bases de datos, diseño de UI / UX, código abierto. y los blogs de tecnología. Estoy disponible para trabajar. Si desea construir algo juntos, <a href="mailto:mralexsaavedra@gmail.com">póngase en contacto</a>.',
+          knowledge: 'Conocimientos',
+          others: 'otros',
+          worktime:
+            'Estudié el Grado de Ingeniería Informática de Gestión y Sistemas de Información en la Escuela de Ingeniería de Bilbao, ubicada en San Mamés. Durante siete meses estuve de prácticas en una empresa donde comenzó mi trabajo cómo desarrollador web. Dediqué mucho tiempo a hacer un buen Trabajo de Fin de Grado, y decidí presentar una plataforma IoT para el registro de datos meterorológicos y su visualización mediante una aplicación móvil. Después de que acabará mi vida como estudiante universitario, encontré un trabajo cómo desarrollador Full Stack en dónde pasé un año entero. Además, en ese periodo desarrollé una aplicación móvil sencilla con la tecnología Flutter. Después de ese año, decidí cambiar de trabajo y de ubicación a otra empresa y avanzar un poco más en mi carrera profesional. No sólo considero que la programación sea mi trabajo, sino que también la considero de hobbi ya que me encanta descubrir nuevas tecnologias, hacer MOOCS, compartir mis proyectos tanto en GitHub cómo en GitLab, twittear sobre cosas interesantes, etc.',
+          post: 'Lee mis últimos post',
+        },
+      };
+
+      $(document).ready(function () {
         setLanguage();
-      }, 700);
-    }
-
-    function setLanguage() {
-      $(document).ready(function () {
-        $('#description')[0].innerHTML = i18n[language].description;
-        $('#knowledge')[0].innerText = i18n[language].knowledge;
-        $('#others')[0].innerText = i18n[language].others;
-        $('#worktime')[0].innerHTML = i18n[language].worktime;
-        $('#post')[0].innerText = i18n[language].post;
-        $("body").animate({
-          opacity: '1',
-        }, "slow");
       });
-    }
-  </script>
-<script type="text/javascript" src="runtime.ec2944dd8b20ec099bf3.js"></script><script type="text/javascript" src="polyfills.c6871e56cb80756a5498.js"></script><script type="text/javascript" src="main.9868d9b237c3a48c54da.js"></script></body>
 
+      function changeLanguage() {
+        if (language === 'en') {
+          language = 'es';
+        } else {
+          language = 'en';
+        }
+        $(document).ready(function () {
+          $('body').animate(
+            {
+              opacity: '0',
+            },
+            'slow'
+          );
+        });
+        setTimeout(() => {
+          setLanguage();
+        }, 700);
+      }
+
+      function setLanguage() {
+        $(document).ready(function () {
+          $('#description')[0].innerHTML = i18n[language].description;
+          $('#knowledge')[0].innerText = i18n[language].knowledge;
+          $('#others')[0].innerText = i18n[language].others;
+          $('#worktime')[0].innerHTML = i18n[language].worktime;
+          // $('#post')[0].innerText = i18n[language].post;
+          $('body').animate(
+            {
+              opacity: '1',
+            },
+            'slow'
+          );
+        });
+      }
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-129300902-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'UA-129300902-1');
+    </script>
+    <script
+      type="text/javascript"
+      src="runtime.ec2944dd8b20ec099bf3.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="polyfills.c6871e56cb80756a5498.js"
+    ></script>
+    <script type="text/javascript" src="main.9868d9b237c3a48c54da.js"></script>
+  </body>
 </html>
